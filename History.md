@@ -60,3 +60,14 @@ commit by afterloe (lm6289511@gmail.com)
 ### delete files
 > README.md  
 
+
+0.0.1 / 2017-7-27 16:27:33
+==================
+commit by afterloe (lm6289511@gmail.com)
+
+  * master: 启动bash文件
+
+
+### new files
+> run.sh  
+
