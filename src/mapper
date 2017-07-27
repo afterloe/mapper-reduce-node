@@ -6,8 +6,38 @@
   * MIT Licensed
   *
   * Authors:
-  *   afterloe.L <> ()
+  *   afterloe.L <lm6289511@gmail.com> (https://github.com/afterloe)
   * Date:
   *   2017-7-27 09:31:00
   */
 "use strict";
+
+const readline = require('readline'); // 引入api
+process.stdin.setEncoding('utf8'); // 设置输入流编码
+
+// 初始化 行读取 组件
+const rl = readline.createInterface({
+  input: process.stdin,
+  output: process.stdout
+});
+
+// map 函数
+const mapper = (item = []) => {
+  const [, why, , , , , , , , name, plate] = item;
+  if ("巴士" !== why) {
+    return ;
+  }
+  rl.write(`${name} \t ${plate} \n`);
+};
+
+// 编写行读取服务
+rl.on('line', input => {
+  const _ = input.replace(/\"/g,'').split(','); // 全局替换 " 为空格，同时按照 , 进行分割
+  if (_.length > 0) {
+    mapper(_);
+  }
+});
+
+process.stdin.on('end', () => {
+  rl.close();
+});

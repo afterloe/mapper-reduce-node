@@ -11,3 +11,17 @@
   *   2017-7-27 09:33:31
   */
 "use strict";
+
+const readline = require('readline'); // 引入api
+process.stdin.setEncoding('utf8'); // 设置输入流编码
+
+// 初始化 行读取 组件
+const rl = readline.createInterface({
+  input: process.stdin,
+  output: process.stdout
+});
+
+// 编写行读取服务
+rl.on('line', input => {
+  // console.log(input);
+});
