@@ -15,13 +15,35 @@
 const readline = require('readline'); // 引入api
 process.stdin.setEncoding('utf8'); // 设置输入流编码
 
+const map = new Map();
+
 // 初始化 行读取 组件
 const rl = readline.createInterface({
   input: process.stdin,
-  output: process.stdout
 });
+
+const reduce = (item = []) => {
+  const [name, plate] = item;
+  const flag = map.get(name);
+  if (flag) {
+    flag.add(plate);
+    map.set(name, flag);
+  } else {
+    map.set(name, new Set().add(plate));
+  }
+};
 
 // 编写行读取服务
 rl.on('line', input => {
-  // console.log(input);
+  const _ = input.split('\t');
+  if (_.length > 1) {
+    reduce(_);
+  }
+});
+
+process.stdin.on('end', () => {
+  rl.close();
+  for (let [key, value] of map.entries()) {
+    console.log(`${key}\t${value.size}\t${Array.from(value).join(",")}`);
+  }
 });

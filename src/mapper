@@ -18,7 +18,6 @@ process.stdin.setEncoding('utf8'); // 设置输入流编码
 // 初始化 行读取 组件
 const rl = readline.createInterface({
   input: process.stdin,
-  output: process.stdout
 });
 
 // map 函数
@@ -27,7 +26,7 @@ const mapper = (item = []) => {
   if ("巴士" !== why) {
     return ;
   }
-  rl.write(`${name} \t ${plate} \n`);
+  console.log(`${name}\t${plate}`);
 };
 
 // 编写行读取服务

@@ -34,3 +34,15 @@ commit by afterloe (lm6289511@gmail.com)
 > .gitignore  
 > package.json  
 
+
+0.0.1 / 2017-7-27 14:8:2
+==================
+commit by afterloe (lm6289511@gmail.com)
+
+  * master: 完善代码
+
+
+### modify files
+> src/mapper  
+> src/reduce  
+
