@@ -1,0 +1,13 @@
+#!/usr/bin/env node
+/**
+  * afterloe.L - map-reduce-node/src/mapper
+  *
+  * Copyright(c) afterloe.L.
+  * MIT Licensed
+  *
+  * Authors:
+  *   afterloe.L <> ()
+  * Date:
+  *   2017-7-27 09:31:00
+  */
+"use strict";
