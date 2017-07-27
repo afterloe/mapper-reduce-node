@@ -71,3 +71,17 @@ commit by afterloe (lm6289511@gmail.com)
 ### new files
 > run.sh  
 
+
+0.0.1 / 2017-7-27 16:31:55
+==================
+commit by afterloe (lm6289511@gmail.com)
+
+  * master: hadoop上实践
+
+
+### modify files
+> README.md  
+
+### delete files
+> README.md  
+
